@@ -1,18 +1,12 @@
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/layout/HeroSection';
+import HeroContent from '@/components/features/HeroContent';
 
 export default function Home() {
   return (
     <Layout>
       <HeroSection
-        leftContent={
-          <div>
-            <h1>A simpler way to feel better.</h1>
-            <p className="text-large">
-              A gentle mood tracking app designed to help you understand your emotions with clarity and ease.
-            </p>
-          </div>
-        }
+        leftContent={<HeroContent />}
         rightContent={
           <div style={{
             width: '100%',
