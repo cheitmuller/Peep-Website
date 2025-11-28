@@ -121,7 +121,7 @@
           "1",
           "2"
         ],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
@@ -156,15 +156,16 @@
               2
             ],
             "details": "Create the HeroSection.js component with left and right content containers. Implement the two-column layout using the grid system established in the base layout. Add responsive behavior to stack the columns vertically on mobile devices. Ensure proper spacing and alignment between the columns at all breakpoints. Add placeholder containers for the text content and video that will be implemented in subsequent tasks.",
-            "status": "pending",
+            "status": "done",
             "testStrategy": "Test the hero section layout across all breakpoints to verify proper column alignment and spacing. Confirm that the columns stack correctly on mobile devices with appropriate margins and padding. Check that the content containers are properly sized and positioned.",
-            "parentId": "undefined"
+            "parentId": "undefined",
+            "updatedAt": "2025-11-28T19:46:08.838Z"
           }
         ],
         "complexity": 5,
         "recommendedSubtasks": 3,
         "expansionPrompt": "Break down the responsive layout implementation into subtasks for the overall grid system, responsive breakpoints configuration, and specific component layout structures.",
-        "updatedAt": "2025-11-28T19:45:29.142Z"
+        "updatedAt": "2025-11-28T19:46:08.838Z"
       },
       {
         "id": "4",
@@ -177,7 +178,7 @@
           "2",
           "3"
         ],
-        "status": "pending",
+        "status": "in-progress",
         "subtasks": [
           {
             "id": 1,
@@ -204,7 +205,8 @@
         ],
         "complexity": 3,
         "recommendedSubtasks": 2,
-        "expansionPrompt": "Divide the header implementation into subtasks for the component structure and styling, and the download button functionality."
+        "expansionPrompt": "Divide the header implementation into subtasks for the component structure and styling, and the download button functionality.",
+        "updatedAt": "2025-11-28T19:46:40.712Z"
       },
       {
         "id": "5",
@@ -507,9 +509,9 @@
     ],
     "metadata": {
       "version": "1.0.0",
-      "lastModified": "2025-11-28T19:45:29.142Z",
+      "lastModified": "2025-11-28T19:46:40.712Z",
       "taskCount": 10,
-      "completedCount": 2,
+      "completedCount": 3,
       "tags": [
         "master"
       ]
