@@ -1,0 +1,76 @@
+.heroSection {
+  width: 100%;
+  min-height: calc(100vh - 80px); /* Account for header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.heroContentLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 100%;
+}
+
+.heroContentRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Tablet and up - Two column layout */
+@media (min-width: 768px) {
+  .heroContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .heroContentLeft {
+    max-width: 540px;
+  }
+}
+
+/* Desktop - Adjust proportions */
+@media (min-width: 1200px) {
+  .heroContainer {
+    max-width: 1400px;
+    gap: clamp(3rem, 5vw, 5rem);
+  }
+
+  .heroSection {
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+/* Mobile - Stack layout */
+@media (max-width: 767px) {
+  .heroSection {
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .heroContainer {
+    padding: 0 var(--spacing-sm);
+    gap: var(--spacing-lg);
+  }
+
+  /* On mobile, show right content (video) first if needed */
+  .heroContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
