@@ -68,7 +68,7 @@ export default function HeroContent({
           onClick={handleAppStoreClick}
         >
           <Image
-            src="/images/Apple_logo_black.svg"
+            src="/apple-icon.png"
             alt=""
             width={20}
             height={20}
