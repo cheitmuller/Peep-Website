@@ -220,7 +220,7 @@
         "dependencies": [
           "3"
         ],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
@@ -228,9 +228,10 @@
             "description": "Create and style the headline and subheadline elements of the HeroContent component with proper typography and responsive behavior.",
             "dependencies": [],
             "details": "1. Implement the headline with proper font styling (SF Pro or Inter, large and bold)\n2. Style the subheadline with medium size and regular weight\n3. Ensure proper spacing between headline and subheadline\n4. Test text readability across different screen sizes\n5. Implement responsive font sizing using CSS media queries\n6. Ensure text maintains proper line height and spacing on mobile devices",
-            "status": "pending",
+            "status": "done",
             "testStrategy": "Test text readability across various devices (mobile, tablet, desktop). Verify that font sizes adjust appropriately on different screen sizes. Check that line heights and spacing maintain visual hierarchy.",
-            "parentId": "undefined"
+            "parentId": "undefined",
+            "updatedAt": "2025-11-28T19:52:57.260Z"
           },
           {
             "id": 2,
@@ -240,15 +241,16 @@
               1
             ],
             "details": "1. Style the CTA button with purple background and white text\n2. Implement pill shape design with proper border-radius\n3. Add the Apple icon SVG and ensure proper alignment\n4. Set up the correct App Store link with target=\"_blank\" and rel attributes\n5. Add hover and focus states for better interactivity\n6. Style the \"No account required\" subtext\n7. Ensure the CTA button is properly sized and positioned on all devices",
-            "status": "pending",
+            "status": "done",
             "testStrategy": "Verify that the CTA button links to the correct App Store URL. Test hover and focus states for accessibility. Ensure the button is properly sized on mobile devices and maintains its styling across browsers.",
-            "parentId": "undefined"
+            "parentId": "undefined",
+            "updatedAt": "2025-11-28T19:52:57.261Z"
           }
         ],
         "complexity": 3,
         "recommendedSubtasks": 2,
         "expansionPrompt": "Break down the hero content implementation into subtasks for the text content component and the CTA button styling and functionality.",
-        "updatedAt": "2025-11-28T19:51:55.932Z"
+        "updatedAt": "2025-11-28T19:52:57.261Z"
       },
       {
         "id": "6",
@@ -260,7 +262,7 @@
         "dependencies": [
           "3"
         ],
-        "status": "pending",
+        "status": "in-progress",
         "subtasks": [
           {
             "id": 1,
@@ -300,7 +302,8 @@
         ],
         "complexity": 6,
         "recommendedSubtasks": 3,
-        "expansionPrompt": "Divide the video implementation into subtasks for the video component with autoplay functionality, the iPhone mockup frame styling, and responsive behavior across devices."
+        "expansionPrompt": "Divide the video implementation into subtasks for the video component with autoplay functionality, the iPhone mockup frame styling, and responsive behavior across devices.",
+        "updatedAt": "2025-11-28T19:53:41.992Z"
       },
       {
         "id": "7",
@@ -512,9 +515,9 @@
     ],
     "metadata": {
       "version": "1.0.0",
-      "lastModified": "2025-11-28T19:51:55.933Z",
+      "lastModified": "2025-11-28T19:53:41.992Z",
       "taskCount": 10,
-      "completedCount": 4,
+      "completedCount": 5,
       "tags": [
         "master"
       ]
