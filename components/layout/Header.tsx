@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { trackAppStoreClick } from '@/lib/analytics';
 import styles from './Header.module.css';
 
 interface HeaderProps {
@@ -9,6 +12,10 @@ interface HeaderProps {
 export default function Header({
   appStoreUrl = 'https://apps.apple.com/app/peep'
 }: HeaderProps) {
+  const handleAppStoreClick = () => {
+    trackAppStoreClick('header');
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
@@ -33,6 +40,7 @@ export default function Header({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Download Peep on iOS"
+            onClick={handleAppStoreClick}
           >
             <svg
               className={styles.appleIcon}

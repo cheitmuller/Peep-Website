@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { trackAppStoreClick } from '@/lib/analytics';
 import styles from './HeroContent.module.css';
 
 interface HeroContentProps {
@@ -8,6 +11,10 @@ interface HeroContentProps {
 export default function HeroContent({
   appStoreUrl = 'https://apps.apple.com/app/peep'
 }: HeroContentProps) {
+  const handleAppStoreClick = () => {
+    trackAppStoreClick('hero');
+  };
+
   return (
     <div className={styles.heroContent}>
       {/* Headline */}
@@ -28,6 +35,7 @@ export default function HeroContent({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download Peep on iOS"
+          onClick={handleAppStoreClick}
         >
           <svg
             className={styles.appleIcon}
