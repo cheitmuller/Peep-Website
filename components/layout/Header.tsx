@@ -43,7 +43,7 @@ export default function Header({
             onClick={handleAppStoreClick}
           >
             <Image
-              src="/images/apple-icon.svg"
+              src="/images/Apple_logo_black.svg"
               alt=""
               width={20}
               height={20}
