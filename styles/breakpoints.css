@@ -1,0 +1,55 @@
+/* Breakpoint Configuration */
+/*
+  Mobile: < 768px
+  Tablet: 768px - 1199px
+  Desktop: >= 1200px
+*/
+
+:root {
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1199px;
+  --breakpoint-desktop: 1200px;
+}
+
+/* Media Query Mixins as CSS Custom Media (for future use) */
+/* Note: CSS Custom Media queries are not yet widely supported,
+   so we'll use standard @media queries in components */
+
+/* Mobile First Media Queries */
+
+/* Tablet and up (min-width: 768px) */
+@media (min-width: 768px) {
+  .tablet-up {
+    display: block;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Desktop and up (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .desktop-up {
+    display: block;
+  }
+  .tablet-down {
+    display: none;
+  }
+}
+
+/* Mobile only (max-width: 767px) */
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
+  .tablet-up {
+    display: none;
+  }
+}
+
+/* Tablet only (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .tablet-only {
+    display: block;
+  }
+}
