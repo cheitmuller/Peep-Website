@@ -21,7 +21,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 400px;
+  max-width: 200px;
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -31,7 +31,7 @@
 /* Tablet - Slightly larger */
 @media (min-width: 768px) {
   .appVideo {
-    max-width: 450px;
+    max-width: 225px;
   }
 }
 
@@ -42,7 +42,7 @@
   }
 
   .appVideo {
-    max-width: 500px;
+    max-width: 250px;
   }
 
   .backgroundGlow {
