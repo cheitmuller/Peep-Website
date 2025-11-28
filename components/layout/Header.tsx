@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { trackAppStoreClick } from '@/lib/analytics';
 import styles from './Header.module.css';
 
@@ -17,7 +18,15 @@ export default function Header({
   };
 
   return (
-    <header className={styles.header}>
+    <motion.header
+      className={styles.header}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }}
+    >
       <div className={styles.headerContent}>
         {/* Logo Container */}
         <div className={styles.logoContainer}>
@@ -53,6 +62,6 @@ export default function Header({
           </a>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

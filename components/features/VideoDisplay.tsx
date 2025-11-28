@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import styles from './VideoDisplay.module.css';
 
 interface VideoDisplayProps {
@@ -50,19 +51,35 @@ export default function VideoDisplay({
   }, []);
 
   return (
-    <div className={styles.videoContainer}>
+    <motion.div
+      className={styles.videoContainer}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.3,
+        ease: [0.22, 1, 0.36, 1]
+      }}
+    >
       <div className={styles.backgroundGlow}></div>
-      <video
+      <motion.video
         ref={videoRef}
         className={styles.appVideo}
         muted
         loop
         playsInline
         preload="auto"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0.22, 1, 0.36, 1]
+        }}
       >
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
-    </div>
+      </motion.video>
+    </motion.div>
   );
 }

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { trackAppStoreClick } from '@/lib/analytics';
 import styles from './HeroContent.module.css';
 
@@ -16,20 +17,48 @@ export default function HeroContent({
     trackAppStoreClick('hero');
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
   return (
-    <div className={styles.heroContent}>
+    <motion.div
+      className={styles.heroContent}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {/* Headline */}
-      <h1 className={styles.headline}>
+      <motion.h1 className={styles.headline} variants={itemVariants}>
         A simpler way to feel better.
-      </h1>
+      </motion.h1>
 
       {/* Subheadline */}
-      <p className={styles.subheadline}>
+      <motion.p className={styles.subheadline} variants={itemVariants}>
         A gentle mood tracking app designed to help you understand your emotions with clarity and ease.
-      </p>
+      </motion.p>
 
       {/* CTA Container */}
-      <div className={styles.ctaContainer}>
+      <motion.div className={styles.ctaContainer} variants={itemVariants}>
         <a
           href={appStoreUrl}
           className={styles.primaryCta}
@@ -48,7 +77,7 @@ export default function HeroContent({
           Download on iOS
         </a>
         <p className={styles.ctaSubtext}>No account required.</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
