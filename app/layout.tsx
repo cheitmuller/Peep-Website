@@ -11,6 +11,37 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Peep - A simpler way to feel better',
   description: 'A gentle mood tracking app designed to help you understand your emotions with clarity and ease.',
+  keywords: ['mood tracking', 'mental health', 'emotional wellness', 'mood journal', 'self-care app'],
+  authors: [{ name: 'Peep' }],
+  creator: 'Peep',
+  publisher: 'Peep',
+  metadataBase: new URL('https://peep-app.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://peep-app.com',
+    title: 'Peep - A simpler way to feel better',
+    description: 'A gentle mood tracking app designed to help you understand your emotions with clarity and ease.',
+    siteName: 'Peep',
+    images: [
+      {
+        url: '/images/peep-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Peep - Mood Tracking App',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Peep - A simpler way to feel better',
+    description: 'A gentle mood tracking app designed to help you understand your emotions with clarity and ease.',
+    images: ['/images/peep-logo.png'],
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({
