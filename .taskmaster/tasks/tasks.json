@@ -1,0 +1,446 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Set up Next.js project structure",
+        "description": "Initialize a Next.js project with the required dependencies and folder structure for the Peep marketing website.",
+        "details": "1. Create a new Next.js project using `npx create-next-app@latest peep-website`\n2. Set up the following folder structure:\n   - `/pages`: For main page routes\n   - `/components`: For reusable UI components\n   - `/public`: For static assets like images and videos\n   - `/styles`: For CSS modules or global styles\n3. Install necessary dependencies:\n   - `npm install framer-motion` (for animations)\n   - `npm install @vercel/analytics` (for tracking metrics)\n4. Configure basic Next.js settings in `next.config.js`\n5. Set up deployment configuration for Vercel\n6. Initialize Git repository for version control",
+        "testStrategy": "Verify project structure is correctly set up by running the development server with `npm run dev` and ensuring the application loads without errors. Test deployment to Vercel using a staging environment.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Initialize Next.js project and set up Git repository",
+            "description": "Create a new Next.js project using the create-next-app command and initialize Git for version control",
+            "dependencies": [],
+            "details": "Run `npx create-next-app@latest peep-website` to create the project. Accept TypeScript configuration if prompted. Initialize Git repository with `git init`, create a .gitignore file (if not already created), and make an initial commit with `git add .` and `git commit -m \"Initial Next.js project setup\"`.",
+            "status": "pending",
+            "testStrategy": "Verify the project initializes correctly by running `npm run dev` and confirming the default Next.js page loads in the browser at localhost:3000"
+          },
+          {
+            "id": 2,
+            "title": "Set up folder structure and organize project files",
+            "description": "Create and organize the required folder structure for components, pages, styles, and public assets",
+            "dependencies": [
+              1
+            ],
+            "details": "Ensure the `/pages` directory exists for routing. Create `/components` directory for UI components with subdirectories for layout, shared, and feature-specific components. Set up `/public` directory for static assets including images and videos. Create `/styles` directory for CSS modules or global styles. Add placeholder files in each directory to maintain structure in Git.",
+            "status": "pending",
+            "testStrategy": "Verify all directories are created with proper structure. Ensure placeholder files are committed to Git and the structure matches the requirements specified in the task details."
+          },
+          {
+            "id": 3,
+            "title": "Install dependencies and configure deployment settings",
+            "description": "Install required npm packages and configure Next.js and Vercel deployment settings",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Install dependencies with `npm install framer-motion @vercel/analytics`. Configure basic Next.js settings in `next.config.js` including image optimization, internationalization if needed, and any environment variables. Create a `vercel.json` file if custom Vercel deployment configuration is needed. Set up environment variables in a `.env.local` file (add to .gitignore) and document required variables in a `.env.example` file.",
+            "status": "pending",
+            "testStrategy": "Verify all dependencies are correctly installed by checking package.json. Test that Next.js configuration works by building the project with `npm run build`. Test Vercel deployment by connecting the Git repository to Vercel and deploying to a staging environment."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Implement brand assets and styling",
+        "description": "Set up global styling, typography, and import brand assets according to the PRD specifications.",
+        "details": "1. Create a global CSS file with brand colors:\n   ```css\n   :root {\n     --white: #FFFFFF;\n     --text: #0A0A0A;\n     --accent-purple: #6E4AFF;\n     --soft-gray: #F3F3F3;\n   }\n   ```\n2. Import and configure typography (Inter and SF Pro or similar):\n   - Use Google Fonts or local font files\n   - Configure font-family hierarchy in global CSS\n3. Import brand assets:\n   - Add Peep bird logo (SVG/PNG) to `/public/images/`\n   - Create favicon from the Peep bird logo\n   - Set up metadata in `_document.js` or `_app.js`\n4. Create reusable style components/classes for:\n   - Buttons (primary CTA style)\n   - Typography (headings, body text)\n   - Layout containers",
+        "testStrategy": "Verify all brand assets load correctly across browsers. Test that typography and colors match the brand guidelines by visual inspection. Ensure favicon displays correctly in browser tabs.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create global CSS file with brand colors and base styling",
+            "description": "Set up the foundation for the site's visual identity by creating a global CSS file with brand colors and base styling elements.",
+            "dependencies": [],
+            "details": "Create a global.css file in the styles directory. Define CSS variables for brand colors (--white: #FFFFFF, --text: #0A0A0A, --accent-purple: #6E4AFF, --soft-gray: #F3F3F3). Add base styling for common elements like body, main containers, and utility classes for spacing and layout. Link this global CSS file to the application's entry point (_app.js or similar).",
+            "status": "pending",
+            "testStrategy": "Verify that CSS variables are correctly defined and accessible throughout the application. Test that base styling is applied consistently across different browsers."
+          },
+          {
+            "id": 2,
+            "title": "Configure typography with Inter and SF Pro fonts",
+            "description": "Import and configure the typography system using Inter and SF Pro (or similar) fonts to establish a consistent text hierarchy.",
+            "dependencies": [
+              1
+            ],
+            "details": "Import Inter and SF Pro fonts either via Google Fonts CDN or by adding local font files to the project. Configure font-family hierarchy in the global CSS with appropriate fallbacks. Create typography classes for different text elements (headings h1-h6, paragraphs, links, etc.) with proper font sizes, weights, and line heights. Ensure text is responsive across different screen sizes.",
+            "status": "pending",
+            "testStrategy": "Test font loading performance. Verify typography renders correctly across different devices and browsers. Check that font fallbacks work when primary fonts fail to load."
+          },
+          {
+            "id": 3,
+            "title": "Import and integrate brand assets and favicon",
+            "description": "Add the Peep bird logo and create favicon from it, setting up proper metadata for the application.",
+            "dependencies": [
+              1
+            ],
+            "details": "Add the Peep bird logo in SVG/PNG format to the /public/images/ directory. Create favicon versions in different sizes (16x16, 32x32, 192x192 for PWA support) from the Peep bird logo. Set up metadata in _document.js or _app.js including favicon links, application name, and other relevant meta tags. Create reusable components for brand assets that might be used throughout the application.",
+            "status": "pending",
+            "testStrategy": "Verify that all brand assets load correctly across browsers. Test that favicon displays properly in browser tabs and bookmarks. Ensure SVG assets scale appropriately on different screen sizes."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Create responsive layout structure",
+        "description": "Implement the responsive layout framework for the landing page, including the header and hero section structure.",
+        "details": "1. Create a responsive grid layout using CSS Grid or Flexbox:\n   ```jsx\n   // Layout.js component\n   export default function Layout({ children }) {\n     return (\n       <div className=\"layout\">\n         <header className=\"header\">Header content</header>\n         <main>{children}</main>\n         <footer className=\"footer\">Footer content</footer>\n       </div>\n     );\n   }\n   ```\n2. Implement responsive breakpoints:\n   - Desktop: 1200px+\n   - Tablet: 768px-1199px\n   - Mobile: <768px\n3. Create the two-column hero section structure:\n   ```jsx\n   // HeroSection.js\n   export default function HeroSection() {\n     return (\n       <section className=\"hero-section\">\n         <div className=\"hero-content-left\">\n           {/* Text content will go here */}\n         </div>\n         <div className=\"hero-content-right\">\n           {/* Video content will go here */}\n         </div>\n       </section>\n     );\n   }\n   ```\n4. Implement responsive behavior to stack columns on mobile",
+        "testStrategy": "Test responsiveness across multiple device sizes using browser dev tools. Verify that the layout correctly stacks on mobile devices and maintains proper spacing and alignment at all breakpoints.",
+        "priority": "high",
+        "dependencies": [
+          1,
+          2
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement base layout component with responsive grid",
+            "description": "Create the Layout.js component with responsive grid structure using CSS Grid or Flexbox that will serve as the foundation for all pages.",
+            "dependencies": [],
+            "details": "Create the Layout.js component that includes header, main content area, and footer placeholders. Implement the responsive grid using CSS Grid or Flexbox with appropriate container classes. Ensure the layout adapts to different screen sizes with proper spacing and alignment. Include basic styling for the layout containers with CSS modules or styled-components.",
+            "status": "pending",
+            "testStrategy": "Test the layout structure on different viewport sizes (desktop, tablet, mobile) using browser dev tools. Verify that the grid system properly adjusts to different screen sizes and maintains proper spacing."
+          },
+          {
+            "id": 2,
+            "title": "Configure responsive breakpoints and media queries",
+            "description": "Set up the responsive breakpoint system with appropriate media queries for desktop, tablet, and mobile views.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create a breakpoints.js file or CSS variables to define the breakpoint values (Desktop: 1200px+, Tablet: 768px-1199px, Mobile: <768px). Implement media query mixins or utility functions that can be reused across components. Configure the responsive behavior for layout transitions between breakpoints. Ensure consistent application of breakpoints throughout the application.",
+            "status": "pending",
+            "testStrategy": "Test the breakpoint system by resizing the browser window and observing layout changes at each defined breakpoint. Verify smooth transitions between different viewport sizes and confirm that the correct styles are applied at each breakpoint."
+          },
+          {
+            "id": 3,
+            "title": "Build responsive hero section with two-column layout",
+            "description": "Implement the hero section component with a responsive two-column layout that stacks on mobile devices.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Create the HeroSection.js component with left and right content containers. Implement the two-column layout using the grid system established in the base layout. Add responsive behavior to stack the columns vertically on mobile devices. Ensure proper spacing and alignment between the columns at all breakpoints. Add placeholder containers for the text content and video that will be implemented in subsequent tasks.",
+            "status": "pending",
+            "testStrategy": "Test the hero section layout across all breakpoints to verify proper column alignment and spacing. Confirm that the columns stack correctly on mobile devices with appropriate margins and padding. Check that the content containers are properly sized and positioned."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Implement header with logo and download button",
+        "description": "Create the fixed header with the Peep logo on the left and the 'Download on iOS' button on the right.",
+        "details": "1. Create a Header component:\n   ```jsx\n   // Header.js\n   export default function Header() {\n     return (\n       <header className=\"header\">\n         <div className=\"logo-container\">\n           <img src=\"/images/peep-logo.svg\" alt=\"Peep\" className=\"logo\" />\n           {/* Optional: Add wordmark */}\n           <span className=\"wordmark\">Peep</span>\n         </div>\n         <div className=\"cta-container\">\n           <a \n             href=\"https://apps.apple.com/app/peep\" \n             className=\"download-button\"\n             target=\"_blank\"\n             rel=\"noopener noreferrer\"\n           >\n             <img src=\"/images/apple-icon.svg\" alt=\"\" className=\"apple-icon\" />\n             Download on iOS\n           </a>\n         </div>\n       </header>\n     );\n   }\n   ```\n2. Style the header:\n   - Fixed or static position at the top\n   - White background\n   - Minimal height (60-80px)\n   - Proper spacing between elements\n3. Style the download button:\n   - Purple background (#6E4AFF)\n   - White text\n   - Rounded pill shape\n   - Apple icon\n   - Hover and focus states",
+        "testStrategy": "Verify header displays correctly across browsers and device sizes. Test that the logo loads properly and the download button links to the correct App Store URL. Check that the header maintains its position and appearance when scrolling (if fixed).",
+        "priority": "medium",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement Header component structure and layout",
+            "description": "Create the Header component with logo and download button, ensuring proper structure and responsive layout.",
+            "dependencies": [],
+            "details": "1. Create Header.js component with the provided code structure\n2. Import necessary assets (logo and Apple icon)\n3. Set up the header container with flex layout to position logo on left and button on right\n4. Implement responsive behavior to maintain layout on different screen sizes\n5. Ensure proper semantic HTML structure with appropriate accessibility attributes",
+            "status": "pending",
+            "testStrategy": "Test the header layout across different screen sizes. Verify that the logo and download button maintain proper alignment and spacing. Check that the component renders correctly in different browsers."
+          },
+          {
+            "id": 2,
+            "title": "Style the header and download button",
+            "description": "Apply styling to the header component and download button according to the design specifications.",
+            "dependencies": [
+              1
+            ],
+            "details": "1. Create CSS for header with fixed position, white background, and appropriate height (60-80px)\n2. Style the logo container with proper spacing and alignment\n3. Implement the download button with purple background (#6E4AFF), white text, and pill shape\n4. Add hover and focus states for the download button\n5. Ensure consistent spacing between all elements\n6. Implement the Apple icon styling within the button",
+            "status": "pending",
+            "testStrategy": "Verify styles match design specifications across browsers. Test hover and focus states for the download button. Ensure the header maintains its appearance when scrolling if fixed position is implemented."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Implement left side hero content",
+        "description": "Create the left column of the hero section with headline, subheadline, and CTA button.",
+        "details": "1. Create a HeroContent component:\n   ```jsx\n   // HeroContent.js\n   export default function HeroContent() {\n     return (\n       <div className=\"hero-content-left\">\n         <h1 className=\"headline\">A simpler way to feel better.</h1>\n         <p className=\"subheadline\">\n           A gentle mood tracking app designed to help you understand your emotions with clarity and ease.\n         </p>\n         <div className=\"cta-container\">\n           <a \n             href=\"https://apps.apple.com/app/peep\" \n             className=\"primary-cta\"\n             target=\"_blank\"\n             rel=\"noopener noreferrer\"\n           >\n             <img src=\"/images/apple-icon.svg\" alt=\"\" className=\"apple-icon\" />\n             Download on iOS\n           </a>\n           <p className=\"cta-subtext\">No account required.</p>\n         </div>\n       </div>\n     );\n   }\n   ```\n2. Style the content:\n   - Headline: Large, bold font (SF Pro or Inter)\n   - Subheadline: Medium size, regular weight\n   - CTA button: Purple background, white text, pill shape\n   - Proper spacing between elements\n3. Ensure text is readable and properly sized across devices",
+        "testStrategy": "Test readability of text across devices. Verify that the CTA button is properly styled and links to the correct App Store URL. Check that spacing and alignment are consistent with the design inspiration.",
+        "priority": "medium",
+        "dependencies": [
+          3
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement text content component with responsive typography",
+            "description": "Create and style the headline and subheadline elements of the HeroContent component with proper typography and responsive behavior.",
+            "dependencies": [],
+            "details": "1. Implement the headline with proper font styling (SF Pro or Inter, large and bold)\n2. Style the subheadline with medium size and regular weight\n3. Ensure proper spacing between headline and subheadline\n4. Test text readability across different screen sizes\n5. Implement responsive font sizing using CSS media queries\n6. Ensure text maintains proper line height and spacing on mobile devices",
+            "status": "pending",
+            "testStrategy": "Test text readability across various devices (mobile, tablet, desktop). Verify that font sizes adjust appropriately on different screen sizes. Check that line heights and spacing maintain visual hierarchy."
+          },
+          {
+            "id": 2,
+            "title": "Implement CTA button with styling and functionality",
+            "description": "Style and implement the call-to-action button with Apple icon, proper linking, and responsive behavior.",
+            "dependencies": [
+              1
+            ],
+            "details": "1. Style the CTA button with purple background and white text\n2. Implement pill shape design with proper border-radius\n3. Add the Apple icon SVG and ensure proper alignment\n4. Set up the correct App Store link with target=\"_blank\" and rel attributes\n5. Add hover and focus states for better interactivity\n6. Style the \"No account required\" subtext\n7. Ensure the CTA button is properly sized and positioned on all devices",
+            "status": "pending",
+            "testStrategy": "Verify that the CTA button links to the correct App Store URL. Test hover and focus states for accessibility. Ensure the button is properly sized on mobile devices and maintains its styling across browsers."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Implement right side hero content with video",
+        "description": "Create the right column of the hero section with the app video inside an iPhone mockup frame.",
+        "details": "1. Create a VideoDisplay component:\n   ```jsx\n   // VideoDisplay.js\n   import { useEffect, useRef } from 'react';\n\n   export default function VideoDisplay() {\n     const videoRef = useRef(null);\n\n     useEffect(() => {\n       // Autoplay video when component mounts\n       if (videoRef.current) {\n         videoRef.current.play().catch(e => console.log('Autoplay prevented:', e));\n       }\n\n       // IntersectionObserver to play video when visible\n       const observer = new IntersectionObserver(\n         (entries) => {\n           entries.forEach(entry => {\n             if (entry.isIntersecting && videoRef.current) {\n               videoRef.current.play().catch(e => console.log('Autoplay prevented:', e));\n             }\n           });\n         },\n         { threshold: 0.1 }\n       );\n\n       if (videoRef.current) {\n         observer.observe(videoRef.current);\n       }\n\n       return () => {\n         if (videoRef.current) {\n           observer.unobserve(videoRef.current);\n         }\n       };\n     }, []);\n\n     return (\n       <div className=\"video-container\">\n         <div className=\"phone-mockup\">\n           <video\n             ref={videoRef}\n             className=\"app-video\"\n             muted\n             loop\n             playsInline\n           >\n             <source src=\"/videos/peep-app-demo.mp4\" type=\"video/mp4\" />\n             Your browser does not support the video tag.\n           </video>\n         </div>\n       </div>\n     );\n   }\n   ```\n2. Style the video container:\n   - Create iPhone 15 Pro mockup frame using CSS or an image\n   - Add slight drop shadow and rounded edges\n   - Size video appropriately (350-450px wide on desktop)\n   - Add soft, blurred background rectangle behind the phone\n3. Ensure video is responsive and properly sized across devices",
+        "testStrategy": "Test video autoplay functionality across browsers. Verify that the video is properly contained within the iPhone mockup frame. Check that the video is responsive and properly sized across devices. Ensure the video loops correctly.",
+        "priority": "medium",
+        "dependencies": [
+          3
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create VideoDisplay component with autoplay functionality",
+            "description": "Implement the VideoDisplay component with autoplay and IntersectionObserver for visibility detection",
+            "dependencies": [],
+            "details": "Create the VideoDisplay.js component with useRef and useEffect hooks to handle video autoplay. Implement the IntersectionObserver to play the video when it becomes visible in the viewport. Add error handling for browsers that prevent autoplay. Ensure the video is muted, loops continuously, and plays inline.",
+            "status": "pending",
+            "testStrategy": "Test autoplay functionality across different browsers. Verify that the video plays when scrolled into view. Check that error handling works correctly when autoplay is prevented."
+          },
+          {
+            "id": 2,
+            "title": "Style iPhone mockup frame for video container",
+            "description": "Create the CSS styling for the iPhone 15 Pro mockup frame that will contain the app demo video",
+            "dependencies": [
+              1
+            ],
+            "details": "Design the iPhone mockup frame using CSS or an image overlay. Add rounded edges, screen bezels, and a notch to mimic an iPhone 15 Pro. Apply drop shadow effects for depth. Create a soft, blurred background rectangle behind the phone for visual emphasis. Ensure the video fits properly within the mockup frame with appropriate dimensions (350-450px wide on desktop).",
+            "status": "pending",
+            "testStrategy": "Verify the mockup styling matches iPhone 15 Pro appearance. Test that the video is properly contained within the frame. Check that shadows and visual effects render correctly across browsers."
+          },
+          {
+            "id": 3,
+            "title": "Implement responsive behavior for video display",
+            "description": "Ensure the video component and iPhone mockup are responsive across different device sizes",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Create responsive CSS using media queries to adjust the video and iPhone mockup dimensions based on screen size. Implement fluid scaling for mobile devices while maintaining aspect ratio. Optimize the component layout for different viewports (mobile, tablet, desktop). Ensure the video quality remains high while optimizing for performance on mobile devices.",
+            "status": "pending",
+            "testStrategy": "Test the component across multiple device sizes and orientations. Verify that the video and mockup scale appropriately without distortion. Check loading performance on mobile devices with throttled connections."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Implement optional footer",
+        "description": "Create a minimal footer with copyright information and privacy policy link.",
+        "details": "1. Create a Footer component:\n   ```jsx\n   // Footer.js\n   export default function Footer() {\n     const currentYear = new Date().getFullYear();\n     \n     return (\n       <footer className=\"footer\">\n         <div className=\"footer-content\">\n           <p className=\"copyright\">\n             © {currentYear} Peep. All rights reserved.\n             <a \n               href=\"/privacy\" \n               className=\"privacy-link\"\n             >\n               Privacy Policy\n             </a>\n           </p>\n         </div>\n       </footer>\n     );\n   }\n   ```\n2. Style the footer:\n   - Single line, centered text\n   - Subtle text color\n   - Proper spacing from main content\n   - Styled link for privacy policy\n3. Create a basic privacy policy page at `/pages/privacy.js`",
+        "testStrategy": "Verify footer displays correctly across browsers and device sizes. Test that the privacy policy link works correctly. Check that the copyright year is dynamically generated.",
+        "priority": "low",
+        "dependencies": [
+          3
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create and style the Footer component",
+            "description": "Implement the Footer component with copyright information, privacy policy link, and appropriate styling",
+            "dependencies": [],
+            "details": "Create a Footer.js component in the components directory with the provided code structure. Implement dynamic year generation using new Date().getFullYear(). Style the footer with CSS to ensure it has centered text, subtle coloring, and proper spacing from main content. Make sure the privacy policy link is properly styled and clickable. Test the component in different viewport sizes to ensure responsive behavior.",
+            "status": "pending",
+            "testStrategy": "Verify the footer displays correctly across different browsers and device sizes. Test that the copyright year is dynamically generated correctly. Ensure the privacy policy link is styled appropriately and navigates to the correct page."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Implement analytics and tracking",
+        "description": "Set up analytics to track the success metrics specified in the PRD: time on page, App Store clickthrough rate, and bounce rate.",
+        "details": "1. Set up Vercel Analytics:\n   ```jsx\n   // _app.js\n   import { Analytics } from '@vercel/analytics/react';\n\n   function MyApp({ Component, pageProps }) {\n     return (\n       <>\n         <Component {...pageProps} />\n         <Analytics />\n       </>\n     );\n   }\n\n   export default MyApp;\n   ```\n2. Implement custom event tracking for App Store clicks:\n   ```jsx\n   // Track App Store clicks\n   const trackAppStoreClick = () => {\n     // For Vercel Analytics or custom analytics solution\n     if (window.va) {\n       window.va('event', {\n         name: 'app_store_click'\n       });\n     }\n   };\n   ```\n3. Add the tracking function to all App Store buttons\n4. Set up time on page tracking using a custom hook or analytics solution\n5. Configure bounce rate tracking in analytics dashboard",
+        "testStrategy": "Test that analytics are properly recording page views. Verify that App Store click events are being tracked correctly. Set up a test environment to validate that time on page and bounce rate metrics are being recorded accurately.",
+        "priority": "low",
+        "dependencies": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up Vercel Analytics integration",
+            "description": "Configure Vercel Analytics in the Next.js application to begin tracking basic page views and user interactions.",
+            "dependencies": [],
+            "details": "Import and integrate the Vercel Analytics component in _app.js. Verify that the Analytics component is properly initialized and sending data to the Vercel dashboard. Ensure that the analytics script is loading correctly on all pages and not causing any performance issues.",
+            "status": "pending",
+            "testStrategy": "Verify that analytics are properly recording page views by checking the Vercel Analytics dashboard. Test in both development and production environments to ensure data is being collected correctly."
+          },
+          {
+            "id": 2,
+            "title": "Implement App Store click tracking",
+            "description": "Create and implement custom event tracking for all App Store button clicks throughout the application.",
+            "dependencies": [
+              1
+            ],
+            "details": "Develop the trackAppStoreClick function that will register events when users click on App Store buttons. Add this tracking function to all App Store CTAs in the application. Ensure the function handles cases where analytics might not be available. Test that events are being properly recorded in the analytics dashboard.",
+            "status": "pending",
+            "testStrategy": "Create test cases to verify App Store click events are being tracked correctly. Use browser developer tools to confirm events are firing. Check the analytics dashboard to ensure data is being recorded properly."
+          },
+          {
+            "id": 3,
+            "title": "Configure time on page and bounce rate tracking",
+            "description": "Set up tracking for time on page metrics and configure bounce rate measurement in the analytics dashboard.",
+            "dependencies": [
+              1
+            ],
+            "details": "Implement a custom hook or utilize Vercel Analytics features to track time spent on each page. Configure the analytics dashboard to properly display and calculate bounce rate metrics. Document the implementation approach and how to interpret the resulting analytics data for stakeholders.",
+            "status": "pending",
+            "testStrategy": "Set up a test environment to validate that time on page metrics are being recorded accurately. Create test user journeys to verify bounce rate calculations. Compare results with expected values based on simulated user behavior."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Implement animations and interactions",
+        "description": "Add subtle animations and interactions to enhance the user experience while maintaining the clean, minimal aesthetic.",
+        "details": "1. Add subtle entrance animations for page elements using Framer Motion:\n   ```jsx\n   // Example animation for hero content\n   import { motion } from 'framer-motion';\n\n   // In HeroContent component\n   return (\n     <motion.div \n       className=\"hero-content-left\"\n       initial={{ opacity: 0, y: 20 }}\n       animate={{ opacity: 1, y: 0 }}\n       transition={{ duration: 0.5 }}\n     >\n       {/* Content */}\n     </motion.div>\n   );\n   ```\n2. Add hover animations for buttons:\n   ```css\n   .download-button {\n     transition: transform 0.2s ease, box-shadow 0.2s ease;\n   }\n   \n   .download-button:hover {\n     transform: translateY(-2px);\n     box-shadow: 0 4px 8px rgba(110, 74, 255, 0.2);\n   }\n   ```\n3. Add subtle animation for the phone mockup (slight floating effect)\n4. Ensure animations are subtle and don't distract from the content\n5. Make sure animations are disabled for users who prefer reduced motion",
+        "testStrategy": "Test animations across browsers to ensure consistency. Verify that animations respect the user's reduced motion preferences. Check that animations enhance rather than distract from the user experience.",
+        "priority": "low",
+        "dependencies": [
+          5,
+          6
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement entrance animations with Framer Motion",
+            "description": "Add subtle entrance animations for page elements using Framer Motion library to create a polished user experience.",
+            "dependencies": [],
+            "details": "Create reusable animation variants for different components. Implement fade-in and slide-up animations for the hero section, feature cards, and main content sections. Ensure animations have appropriate timing and easing functions. Example implementation:\n```jsx\nconst fadeInUp = {\n  initial: { opacity: 0, y: 20 },\n  animate: { opacity: 1, y: 0 },\n  transition: { duration: 0.5 }\n};\n\n// Apply to components\n<motion.div variants={fadeInUp}>...</motion.div>\n```",
+            "status": "pending",
+            "testStrategy": "Test animations across different browsers and devices. Verify animations trigger at appropriate scroll positions. Ensure animations complete smoothly without causing layout shifts."
+          },
+          {
+            "id": 2,
+            "title": "Implement hover and interactive animations",
+            "description": "Create hover animations for buttons, links, and interactive elements to provide visual feedback to users.",
+            "dependencies": [
+              1
+            ],
+            "details": "Implement hover effects for all buttons using CSS transitions. Add subtle scale and shadow effects for clickable cards. Create micro-interactions for form elements. Implement the floating animation for the phone mockup using CSS keyframes or Framer Motion:\n```css\n@keyframes float {\n  0% { transform: translateY(0px); }\n  50% { transform: translateY(-10px); }\n  100% { transform: translateY(0px); }\n}\n\n.phone-mockup {\n  animation: float 6s ease-in-out infinite;\n}\n```",
+            "status": "pending",
+            "testStrategy": "Test hover animations on both mouse and touch devices. Verify animations provide appropriate feedback without being distracting. Ensure transitions are smooth and performant."
+          },
+          {
+            "id": 3,
+            "title": "Implement reduced motion accessibility",
+            "description": "Ensure animations respect user preferences for reduced motion to maintain accessibility standards.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Add media query checks for prefers-reduced-motion. Create alternative animation settings for users with this preference enabled. Implement a system to disable or significantly reduce animations based on this setting. Example implementation:\n```jsx\n// In a utility hook\nfunction useReducedMotion() {\n  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  return prefersReducedMotion;\n}\n\n// In component\nconst reducedMotion = useReducedMotion();\nconst animationProps = reducedMotion \n  ? { initial: {}, animate: {} } \n  : { initial: { opacity: 0 }, animate: { opacity: 1 } };\n\nreturn <motion.div {...animationProps}>...</motion.div>;\n```",
+            "status": "pending",
+            "testStrategy": "Test with prefers-reduced-motion enabled to verify animations are properly disabled or reduced. Ensure the site remains functional and visually coherent with animations disabled."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Optimize performance and deploy to Vercel",
+        "description": "Optimize the website for performance, accessibility, and SEO, then deploy to Vercel.",
+        "details": "1. Optimize images and video:\n   - Compress images using Next.js Image component\n   - Optimize video file size while maintaining quality\n   - Implement lazy loading for below-the-fold content\n2. Implement SEO best practices:\n   - Add meta tags in `_document.js` or using Next.js Head component\n   - Create a sitemap.xml\n   - Add Open Graph tags for social sharing\n3. Ensure accessibility:\n   - Add proper alt text for images\n   - Ensure sufficient color contrast\n   - Test with keyboard navigation\n   - Add aria attributes where needed\n4. Performance optimizations:\n   - Minimize CSS and JavaScript\n   - Implement code splitting\n   - Configure caching headers\n5. Deploy to Vercel:\n   - Connect GitHub repository to Vercel\n   - Configure build settings\n   - Set up custom domain if available\n6. Test final deployment for any issues",
+        "testStrategy": "Run Lighthouse audits to verify performance, accessibility, SEO, and best practices scores. Test loading speed across various network conditions. Verify that the site is properly deployed and accessible via the Vercel URL. Test that all functionality works correctly in the production environment.",
+        "priority": "medium",
+        "dependencies": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Optimize images and videos for performance",
+            "description": "Implement image and video optimization techniques to improve loading times and overall performance.",
+            "dependencies": [],
+            "details": "Use Next.js Image component to automatically optimize images with proper sizing, formats, and lazy loading. Compress video files using appropriate codecs while maintaining quality. Implement lazy loading for below-the-fold content to improve initial page load times. Test optimizations using Lighthouse and WebPageTest to verify improvements.",
+            "status": "pending",
+            "testStrategy": "Compare before and after performance metrics using Lighthouse. Verify that images load properly across different device sizes. Test video playback quality after optimization. Measure Core Web Vitals improvements."
+          },
+          {
+            "id": 2,
+            "title": "Implement SEO best practices",
+            "description": "Add necessary SEO elements to improve search engine visibility and social sharing capabilities.",
+            "dependencies": [
+              1
+            ],
+            "details": "Add meta tags in `_document.js` or using Next.js Head component for title, description, and keywords. Create a sitemap.xml file and robots.txt for better crawling. Implement Open Graph tags for social media sharing. Add structured data (JSON-LD) for rich snippets. Ensure proper heading hierarchy and semantic HTML throughout the site.",
+            "status": "pending",
+            "testStrategy": "Use tools like Lighthouse SEO audit and Google Search Console to verify SEO implementation. Test social sharing previews using Facebook/Twitter debugging tools. Validate structured data using Google's Rich Results Test."
+          },
+          {
+            "id": 3,
+            "title": "Ensure accessibility compliance",
+            "description": "Implement accessibility improvements to ensure the website is usable by people with disabilities.",
+            "dependencies": [
+              1
+            ],
+            "details": "Add proper alt text for all images. Ensure sufficient color contrast ratios between text and backgrounds. Test and fix keyboard navigation throughout the site. Add appropriate ARIA attributes where needed. Ensure proper focus states for interactive elements. Test with screen readers to verify accessibility. Fix any issues found during testing.",
+            "status": "pending",
+            "testStrategy": "Run accessibility audits using tools like Lighthouse and axe. Test keyboard navigation through all interactive elements. Verify screen reader compatibility using NVDA or VoiceOver. Ensure the site meets WCAG 2.1 AA standards."
+          },
+          {
+            "id": 4,
+            "title": "Deploy to Vercel and configure production settings",
+            "description": "Set up the Vercel deployment process and configure production environment settings for optimal performance.",
+            "dependencies": [
+              1,
+              2,
+              3
+            ],
+            "details": "Connect GitHub repository to Vercel. Configure build settings and environment variables. Set up custom domain if available. Configure caching headers for static assets. Enable Vercel Edge Functions if needed. Implement code splitting and bundle optimization. Set up continuous deployment with preview environments for future updates. Test the production deployment for any issues.",
+            "status": "pending",
+            "testStrategy": "Verify successful deployment by testing all functionality in the production environment. Test loading speed across various network conditions. Verify that caching is working correctly. Test custom domain configuration and SSL certificate. Run final Lighthouse audit on the production URL."
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-11-28T19:06:46.996Z",
+      "updated": "2025-11-28T19:06:46.996Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

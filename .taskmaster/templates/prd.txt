@@ -1,0 +1,140 @@
+Peep – Marketing Website PRD
+Version 1.0 — Minimal Landing Page
+1. Overview
+The Peep website is a single, simple landing page designed to communicate what the app does in one glance and drive iOS downloads. The site should feel light, friendly, minimal, and consistent with the Peep brand (white space, black lines, bird mascot, soft tone).
+Primary Goal: Convert visitors → iOS app downloads.
+Secondary Goals: Explain Peep in one sentence and show the app UI through a video.
+2. Inspiration
+The website should structurally mimic the hero section of: https://www.amyfoodjournal.com/
+Specifically:
+
+Left: headline + subheadline + download button
+Right: phone mockup or video
+Simple fixed header
+Clean white background
+Minimal sections (only one hero section)
+
+3. Page Structure
+Header (Top Bar)
+
+Left: Peep logo (bird icon + Peep wordmark if desired)
+Right: "Download on iOS" button
+
+Style: rounded pill, Peep purple (#6E4AFF), white text, Apple icon
+Clicking it opens App Store link.
+
+
+
+Header should be:
+
+Fixed or static (either is fine; simple is preferred)
+Minimal height
+White background
+
+4. Hero Section
+Layout: Two columns
+
+Left: Text + CTA
+Right: Video of the app inside a phone mockup frame
+
+Left Side Content
+Headline
+"A simpler way to feel better." (Your provided line — this is the main hero headline.)
+Subheadline
+Short, minimal description. Example options:
+
+A gentle mood tracking app designed to help you understand your emotions with clarity and ease.
+Log how you feel in seconds and see your patterns over time.
+Peep makes emotional awareness simple, private, and calming.
+
+Choose one.
+Primary CTA
+Apple-style download button (purple):
+
+Download on iOS
+No account required.
+
+5. Right Side Content
+App Video
+You will provide:
+
+A short looping video showing the core UI (mood check-in → calendar view → tags)
+
+Requirements:
+
+Placed inside an iPhone 15 Pro mockup frame (slight drop shadow, rounded edges)
+Autoplay, muted, loop
+Should begin playing as soon as visible
+Size: approximately 350–450px wide on desktop
+
+The phone frame should slightly overlap a soft, blurred background rectangle (light pastel or very subtle gradient) similar to Amy's design — optional but recommended.
+6. Footer
+Optional — minimal site can exclude footer.
+If included:
+
+Single line centered: © 2025 Peep. All rights reserved.
+Link to privacy policy (static page)
+
+7. Branding Guidelines
+Colors
+Keep the design extremely light and clean.
+
+White background: #FFFFFF
+Text: #0A0A0A
+Accent Purple (Peep): #6E4AFF
+Soft Gray: #F3F3F3
+
+Typography
+
+Headline: SF Pro, Inter, or similar Apple-like clean sans-serif
+Body: Inter Regular
+CTA: Semi-bold
+
+Bird Mascot
+
+Use your existing Peep bird logo
+Line weight: black
+Background: white or transparent
+Size small in header (~32–40px)
+
+8. Technical Requirements
+Platform
+Can be built with:
+
+Next.js (recommended — easy deployments on Vercel)
+Or simple HTML/CSS site
+
+Hosting
+
+Vercel (ideal for simplicity)
+
+Responsiveness
+
+Must work on mobile
+Video stacks under text on smaller screens
+
+Assets Needed From You
+
+Peep logo (PNG/SVG)
+App video (MP4, 15–30 seconds, muted, loopable)
+App Store link
+Brand color code (provided above)
+Optional: favicon of Peep bird
+
+9. Success Metrics
+
+Time on page (target > 8 seconds)
+App Store clickthrough rate (target > 30%)
+Bounce rate < 55%
+
+10. Future Sections (Optional)
+Not included in MVP but easy to add later:
+
+Testimonials
+Feature grid
+Privacy info
+FAQs
+Press kit
+
+11. Final Site Summary (One Paragraph)
+The Peep website is a clean, single-screen landing page featuring: (1) Peep logo in the top-left, (2) a "Download on iOS" button in the top-right, (3) a hero section with the main headline "A simpler way to feel better," (4) a brief description, (5) an App Store download CTA, and (6) a video of the app displayed inside a modern iPhone mockup on the right. The entire site is white, minimal, and designed to echo Apple's visual style while highlighting Peep's calming brand identity.
