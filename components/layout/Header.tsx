@@ -22,7 +22,7 @@ export default function Header({
         {/* Logo Container */}
         <div className={styles.logoContainer}>
           <Image
-            src="/images/peep-logo.svg"
+            src="/images/peep-logo.png"
             alt="Peep"
             width={40}
             height={40}
