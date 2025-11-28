@@ -6,7 +6,7 @@
   --soft-gray: #F3F3F3;
 
   /* Typography */
-  --font-sans: var(--font-inter), -apple-system, 'SF Pro Display', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: var(--font-jomolhari), -apple-system, 'SF Pro Display', BlinkMacSystemFont, 'Segoe UI', Roboto, serif;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
