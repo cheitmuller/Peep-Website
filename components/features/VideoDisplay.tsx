@@ -52,25 +52,17 @@ export default function VideoDisplay({
   return (
     <div className={styles.videoContainer}>
       <div className={styles.backgroundGlow}></div>
-      <div className={styles.phoneMockup}>
-        <div className={styles.phoneFrame}>
-          {/* Notch */}
-          <div className={styles.notch}></div>
-
-          {/* Video */}
-          <video
-            ref={videoRef}
-            className={styles.appVideo}
-            muted
-            loop
-            playsInline
-            preload="auto"
-          >
-            <source src={videoSrc} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
+      <video
+        ref={videoRef}
+        className={styles.appVideo}
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source src={videoSrc} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }
