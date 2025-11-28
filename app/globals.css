@@ -5,6 +5,9 @@
   --accent-purple: #6E4AFF;
   --soft-gray: #F3F3F3;
 
+  /* Typography */
+  --font-sans: var(--font-inter), -apple-system, 'SF Pro Display', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -46,7 +49,9 @@ body {
 body {
   color: var(--text);
   background: var(--white);
+  font-family: var(--font-sans);
   line-height: 1.6;
+  font-size: 16px;
 }
 
 /* Links */
@@ -98,4 +103,68 @@ img {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.text-large {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.text-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
