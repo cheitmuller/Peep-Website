@@ -58,7 +58,7 @@ export default function VideoDisplay({
       transition={{
         duration: 0.8,
         delay: 0.3,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1] as any
       }}
     >
       <div className={styles.backgroundGlow}></div>
@@ -74,7 +74,7 @@ export default function VideoDisplay({
         transition={{
           duration: 0.8,
           delay: 0.5,
-          ease: [0.22, 1, 0.36, 1]
+          ease: [0.22, 1, 0.36, 1] as any
         }}
       >
         <source src={videoSrc} type="video/mp4" />
