@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Jomolhari } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
@@ -9,6 +9,13 @@ const jomolhari = Jomolhari({
   display: 'swap',
   variable: '--font-jomolhari',
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 
 export const metadata: Metadata = {
   title: 'Peep - A simpler way to feel better',

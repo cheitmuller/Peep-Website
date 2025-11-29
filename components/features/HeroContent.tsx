@@ -76,7 +76,6 @@ export default function HeroContent({
           />
           Download on iOS
         </a>
-        <p className={styles.ctaSubtext}>No account required.</p>
       </motion.div>
     </motion.div>
   );

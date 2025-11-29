@@ -8,10 +8,12 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  text-align: left;
 }
 
 .privacyPage h1 {
   margin-bottom: var(--spacing-sm);
+  text-align: left;
 }
 
 .lastUpdated {
@@ -19,21 +21,64 @@
   opacity: 0.6;
   font-size: 0.875rem;
   margin-bottom: var(--spacing-xl);
+  text-align: left;
 }
 
 .privacyPage section {
   margin-bottom: var(--spacing-xl);
+  text-align: left;
 }
 
 .privacyPage h2 {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-lg);
   color: var(--accent-purple);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: left;
 }
 
 .privacyPage p {
   line-height: 1.8;
   color: var(--text);
   opacity: 0.85;
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+}
+
+.privacyPage ul,
+.privacyPage ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md);
+  text-align: left;
+}
+
+.privacyPage li {
+  line-height: 1.8;
+  color: var(--text);
+  opacity: 0.85;
+  margin-bottom: var(--spacing-xs);
+  text-align: left;
+}
+
+.privacyPage a {
+  color: var(--accent-purple);
+  text-decoration: underline;
+}
+
+.privacyPage a:hover {
+  opacity: 0.8;
+}
+
+.summary {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary p {
+  font-size: 1.05rem;
 }
 
 @media (max-width: 768px) {

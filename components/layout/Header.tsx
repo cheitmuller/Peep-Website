@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { trackAppStoreClick } from '@/lib/analytics';
 import styles from './Header.module.css';
@@ -29,7 +30,7 @@ export default function Header({
     >
       <div className={styles.headerContent}>
         {/* Logo Container */}
-        <div className={styles.logoContainer}>
+        <Link href="/" className={styles.logoContainer}>
           <Image
             src="/images/peep-logo.png"
             alt="Peep"
@@ -39,7 +40,7 @@ export default function Header({
             priority
           />
           <span className={styles.wordmark}>Peep</span>
-        </div>
+        </Link>
 
         {/* Download Button */}
         <div className={styles.ctaContainer}>
