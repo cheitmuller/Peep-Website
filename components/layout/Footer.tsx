@@ -16,6 +16,13 @@ export default function Footer() {
           >
             Privacy Policy
           </a>
+          {' · '}
+          <a
+            href="/terms"
+            className={styles.privacyLink}
+          >
+            Terms of Service
+          </a>
         </p>
       </div>
     </footer>
