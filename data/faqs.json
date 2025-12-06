@@ -1,0 +1,129 @@
+{
+  "categories": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "questions": [
+        {
+          "id": "how-to-track",
+          "question": "How do I start tracking my mood?",
+          "answer": "Open Peep and tap the '+' button to log your current mood. Choose an emoji that represents how you're feeling, add optional tags and notes if you'd like, then tap save. It's that simple!"
+        },
+        {
+          "id": "mood-emojis",
+          "question": "What do the different mood emojis mean?",
+          "answer": "Peep uses a range of emojis to help you express your emotions. You can choose from happy, sad, angry, anxious, calm, excited, and many more. Pick whichever emoji best captures how you're feeling in the moment - there's no right or wrong choice."
+        },
+        {
+          "id": "tags-notes",
+          "question": "How do I add tags and notes to my mood entries?",
+          "answer": "When creating a mood entry, you'll see fields for tags and notes below the emoji selector. Tags help you categorize your moods (like 'work', 'exercise', 'family'), while notes let you add context about what happened or how you felt. Both are optional but can be helpful for tracking patterns."
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "title": "Features & Functionality",
+      "questions": [
+        {
+          "id": "edit-delete",
+          "question": "Can I edit or delete past mood entries?",
+          "answer": "Yes! Tap on any mood entry in your history to view it, then use the edit or delete buttons. You have full control over all your data stored on your device."
+        },
+        {
+          "id": "view-history",
+          "question": "How do I view my mood history and patterns?",
+          "answer": "Tap the calendar or history icon to see all your past mood entries. You can view them in a list, calendar view, or as charts showing patterns over time. Swipe or use the date picker to navigate between different time periods."
+        },
+        {
+          "id": "insights",
+          "question": "How do I use the weekly/monthly insights?",
+          "answer": "Access insights from the main menu or analytics tab. You'll see visualizations of your mood patterns, most common tags, and more. These insights help you understand your emotional patterns over time."
+        }
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Privacy & Data",
+      "questions": [
+        {
+          "id": "data-storage",
+          "question": "Where is my mood data stored?",
+          "answer": "All your mood data is stored locally on your device using Apple's SwiftData framework. Your entries never leave your device and are never sent to our servers. We don't have servers - we can't access your data even if we wanted to."
+        },
+        {
+          "id": "data-encrypted",
+          "question": "Is my data encrypted?",
+          "answer": "Your data is protected by your device's security (passcode, Face ID, Touch ID). If you have iCloud backup enabled, your data is backed up with Apple's encryption. We recommend keeping your device locked and iOS updated for maximum security."
+        },
+        {
+          "id": "data-privacy",
+          "question": "Can anyone else see my mood entries?",
+          "answer": "No. Your mood data stays entirely on your device. There's no cloud sync, no sharing features, and no way for us or anyone else to access your personal entries. Your emotional data is completely private."
+        },
+        {
+          "id": "delete-data",
+          "question": "How do I delete all my data?",
+          "answer": "To permanently delete all your mood data, simply delete the Peep app from your device. All local data will be removed. If you have iCloud backup enabled, you may also want to remove Peep's data from your iCloud backup in iOS Settings."
+        }
+      ]
+    },
+    {
+      "id": "subscription",
+      "title": "Subscriptions & Billing",
+      "questions": [
+        {
+          "id": "subscription-cost",
+          "question": "How much does Peep cost?",
+          "answer": "Peep offers a free trial to get started. After the trial, you can subscribe for $0.99 per week or purchase lifetime access for $29.99. All purchases are processed securely through the App Store."
+        },
+        {
+          "id": "cancel-subscription",
+          "question": "How do I cancel my subscription?",
+          "answer": "Subscriptions are managed through the App Store, not within Peep. To cancel: Open iOS Settings > tap your name > Subscriptions > find Peep > tap Cancel Subscription. You'll retain access until the current billing period ends."
+        },
+        {
+          "id": "refund",
+          "question": "Can I get a refund?",
+          "answer": "Refunds are handled by Apple through the App Store. If you're not satisfied, you can request a refund within a certain timeframe. Visit reportaproblem.apple.com, sign in, find your Peep purchase, and select 'Request a refund'."
+        },
+        {
+          "id": "restore-purchase",
+          "question": "How do I restore my purchase on a new device?",
+          "answer": "Open Peep on your new device and sign in with the same Apple ID you used to make your purchase. Go to Settings > Restore Purchases. Your subscription or lifetime access should activate automatically if you're using the same Apple ID."
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical Issues",
+      "questions": [
+        {
+          "id": "app-crashing",
+          "question": "The app won't open or is crashing",
+          "answer": "Try these steps: 1) Force quit the app and reopen it, 2) Restart your device, 3) Make sure you have the latest version of Peep from the App Store, 4) Check that your iOS is up to date. If the issue persists, please contact us with your device model and iOS version."
+        },
+        {
+          "id": "entries-not-saving",
+          "question": "My mood entries aren't saving",
+          "answer": "This can happen if your device storage is full or if there's a temporary issue with the app. Check your device storage in iOS Settings > General > iPhone Storage. Make sure Peep has sufficient space. If the problem continues, try restarting the app or your device."
+        },
+        {
+          "id": "notifications",
+          "question": "Notifications aren't working",
+          "answer": "Check that you've enabled notifications for Peep: Go to iOS Settings > Peep > Notifications and ensure they're turned on. Also verify that Do Not Disturb isn't blocking them. You can customize notification times within the Peep app's settings."
+        },
+        {
+          "id": "app-slow",
+          "question": "The app is slow or laggy",
+          "answer": "Performance issues can occur if you have thousands of mood entries. Try: 1) Closing other apps, 2) Restarting your device, 3) Checking for Peep updates in the App Store, 4) Ensuring your iOS is updated. Consider exporting old data and archiving if you have years of entries."
+        },
+        {
+          "id": "restore-not-working",
+          "question": "I can't restore my subscription",
+          "answer": "Make sure you're signed in with the same Apple ID you used to make your purchase. Go to Settings > Restore Purchases. If it still doesn't work, check that your subscription is still active in iOS Settings > Subscriptions. Contact us if you need further help with proof of purchase."
+        }
+      ]
+    }
+  ]
+}

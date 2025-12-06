@@ -245,8 +245,8 @@ export default function PrivacyPage() {
               please contact us:
             </p>
             <p>
-              <strong>Email:</strong> privacy@peep-app.com<br />
-              <strong>Website:</strong> peep-app.com
+              <strong>Email:</strong> peepinquiry@gmail.com<br />
+              <strong>Website:</strong> peepmood.com
             </p>
           </section>
 

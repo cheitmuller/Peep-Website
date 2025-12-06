@@ -1,0 +1,242 @@
+.supportPage {
+  width: 100%;
+  padding: var(--spacing-2xl) 0;
+  min-height: calc(100vh - 200px);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 var(--spacing-md);
+}
+
+.heroSubtext {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.85;
+  margin: 0 0 var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emailDisplay {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(110, 74, 255, 0.05);
+  border: 1px solid rgba(110, 74, 255, 0.2);
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.emailIcon {
+  flex-shrink: 0;
+  color: var(--accent-purple);
+}
+
+.emailDisplay a {
+  color: var(--accent-purple);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.emailDisplay a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.sectionSubtext {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.75;
+  margin: 0 0 var(--spacing-xl);
+  max-width: 700px;
+}
+
+.helpCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.helpCard {
+  padding: var(--spacing-lg);
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.helpCard:hover {
+  border-color: rgba(110, 74, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.helpCardIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(110, 74, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--accent-purple);
+  margin-bottom: var(--spacing-md);
+}
+
+.helpCard h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 var(--spacing-xs);
+}
+
+.helpCard p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.75;
+  margin: 0;
+}
+
+.helpCardLink {
+  color: var(--accent-purple);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.helpCardLink:hover {
+  text-decoration: underline;
+}
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  .supportPage {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .hero {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 7vw, 2rem);
+  }
+
+  .heroSubtext {
+    font-size: 1rem;
+  }
+
+  .emailDisplay {
+    font-size: 0.9375rem;
+    padding: 0.625rem 1rem;
+  }
+
+  .section {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .sectionSubtext {
+    font-size: 0.9375rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .helpCards {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .helpCard {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .supportPage {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroSubtext {
+    font-size: 0.9375rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .emailDisplay {
+    font-size: 0.875rem;
+    flex-direction: column;
+    padding: 0.75rem;
+    gap: var(--spacing-2xs);
+  }
+
+  .section h2 {
+    font-size: 1.25rem;
+  }
+
+  .sectionSubtext {
+    font-size: 0.875rem;
+  }
+
+  .helpCardIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .helpCardIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+}

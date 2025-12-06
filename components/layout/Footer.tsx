@@ -23,6 +23,13 @@ export default function Footer() {
           >
             Terms of Service
           </a>
+          {' · '}
+          <a
+            href="/support"
+            className={styles.privacyLink}
+          >
+            Support
+          </a>
         </p>
       </div>
     </footer>

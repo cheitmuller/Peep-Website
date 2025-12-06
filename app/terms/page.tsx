@@ -270,7 +270,7 @@ export default function TermsPage() {
             <h2>19. Contact Information</h2>
             <p>If you have questions about these Terms, please contact us at:</p>
             <p>
-              <strong>Email:</strong> support@peepmood.com<br />
+              <strong>Email:</strong> peepinquiry@gmail.com<br />
               <strong>Website:</strong> peepmood.com
             </p>
           </section>
